@@ -8,8 +8,8 @@ class NewsApiProvider{
   Client client = Client();
   
   fetchTopIds()async{
-    final respomse = await client.get('$_root/topstories.json');
-    final ids = json.decode(respomse.body);
+    final response = await client.get('$_root/topstories.json');
+    final ids = json.decode(response.body);
     return ids;
   }
 
